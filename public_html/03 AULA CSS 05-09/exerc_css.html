@@ -4,12 +4,13 @@
         <title>Cadastre seu currículo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
     <body>
         <h3>Formulário de Cadastro</h3>
         <form action="cadastrar.jsp">
-            <fieldset>
-                <legend>Dados pessoais</legend>
+            <fieldset class="fsDadosPessoais">
+                <legend class="fsDadosPessoais">Dados pessoais</legend>
                 Nome:<input type="text" name="nome"/> <br/>
                 E-mail:<input type="email" name="email"/> <br/>
                 Cidade:<input type="text" name="cidade"/> <br/>
@@ -22,8 +23,8 @@
                 </select> <br/>
             </fieldset>
             <br/><br/>
-            <fieldset>
-                <legend>Dados profissionais</legend>
+            <fieldset class="fsDadosProf">
+                <legend class="fsDadosProf">Dados profissionais</legend>
                 Cargo pretendido: <br/>
                 <input type="radio" name="cargo" value="sistemas"/>
                 Analista de Sistemas
@@ -42,10 +43,10 @@
                 <textarea cols="60" rows="5"></textarea>
             </fieldset>
             <br/><br/>
-            <fieldset>
-                <legend>Ações</legend>
-                <input type="submit" value="Enviar"/>
-                <input type="reset" value="Limpar"/>
+            <fieldset class="fsAcoes">
+                <legend class="fsAcoes">Ações</legend>
+                <input type="submit" value="Enviar" class="botaoEnviar" />
+                <input type="reset" value="Limpar"  class="botaoLimpar" />
             </fieldset>
         </form>
     </body>
