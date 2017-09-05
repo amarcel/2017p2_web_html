@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Usuário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image: linear-gradient(to bottom, white, #0000FF);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Abra uma conta</h2>
+        <h5>É gratuito e sempre será</h5>
+        <form action="abrirConta.jsp">
+            <table>
+                <tr>
+                    <td> <input type="text" name="nome"
+                                placeholder="Nome"/> </td>
+                    <td> <input type="text" name="sobrenome"
+                                placeholder="Sobrenome"/> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> 
+                        <input type="text" name="emailCel"
+                                placeholder="E-mail ou número de celular"
+                                size="43"  /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="emailCelConf"
+                                placeholder="Insira novamente o e-mail ou o celular"
+                                size="43"  /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="password" name="senha"
+                               placeholder="Nova senha"
+                               size="43" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Aniversário</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="dia">
+                            <option>Dia</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                        <select name="mes">
+                            <option>Mês</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                        <select name="ano">
+                            <option>Ano</option>
+                            <option>1900</option>
+                            <option>1980</option>
+                            <option>2000</option>
+                        </select>
+                    </td>
+                    <td> 
+                        <a href="#">Por que preciso informar minha
+                        data de nascimento?</a>
+                    </td>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" 
+                               name="genero" value="F" />Feminino
+                        <input type="radio"
+                               name="genero" value="M" />Masculino
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Ao clicar em abrir uma conta...
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" 
+                               value="Abrir uma conta"
+                               style="background-color: green; 
+                                      color: white; 
+                                      font-weight: bold;"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
