@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primeiro Exemplo JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function dizerOla() {
+                alert("Olá, mundo");
+            }
+            function criarParagrafo() {
+                document.getElementById("p1").innerHTML 
+                        = "Olá, mundo!";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Mostrar alerta" 
+               onClick="dizerOla()" />
+        <input type="button" value="Mostrar no HTML" 
+               onClick="criarParagrafo()" />
+        <p id="p1">  </p>
+    </body>
+</html>
