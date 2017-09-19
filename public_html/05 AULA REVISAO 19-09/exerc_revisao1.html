@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerenciamento de Contas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .btn-verde {
+                background-color: green;
+                color: white;
+                font-weight: bold;
+            }
+            .btn-azul {
+                background-color: blue;
+                color: white;
+                font-weight: bold;
+            }
+            legend {
+                font-size: 14pt;
+                font-weight: bold;
+            }
+            .conta-paga{
+                color: darkgreen;
+            }
+            .conta-nao-paga{
+                color: darkred;
+            }
+        </style>
+        <script>
+            function registrar(){
+                // pegando os campos:
+                var campoAno = document.getElementById("ano");
+                var campoValor = document.getElementById("valor");
+                // mensagem de alerta:
+                alert("Conta cadastrada.");
+                // limpando:
+                campoAno.value = "";
+                campoValor.value = "";
+            } // fim da função registrar
+            function alterar(){
+                var resposta = confirm("Deseja realmente alterar?");
+                
+                var campoResp = document.getElementById("resposta");
+                if ( resposta === true ) {
+                    campoResp.innerHTML = "Resp. da confirmação: SIM.";
+                    campoResp.style = "color: blue;";
+                } else {
+                    campoResp.innerHTML = "Resp. da confirmação: NÃO.";
+                    campoResp.style = "color: magenta;";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="acao.jsp">
+            <fieldset>
+                <legend>Cadastro de Conta</legend>
+                <p>
+                    Conta:
+                    <select name="conta">
+                        <option value="agua">Água</option>
+                        <option value="luz">Luz</option>
+                        <option value="tel">Telefone</option>
+                    </select>
+                </p>
+                <p>
+                    Mês:
+                    <select name="mes">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                    </select>
+                </p>
+                <p>
+                    Ano:
+                    <input type="number" name="ano" id="ano" />
+                </p>
+                <p>
+                    Valor:
+                    <input type="number" name="valor" id="valor" />
+                </p>
+                <p>
+                    Pagou?
+                    <input type="radio" value="S" name="pagou"/>SIM
+                    <input type="radio" value="N" name="pagou"/>NÃO
+                </p>
+                <p>
+                    <input type="button" value="Registrar" 
+                           class="btn-verde" onclick="registrar()" />
+                </p>
+            </fieldset>
+            <br/><br/>
+            <fieldset>
+                <legend>Contas cadastradas</legend>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Cód.</th>
+                            <th>Mês/Ano</th>
+                            <th>Conta</th>
+                            <th>Valor (R$)</th>
+                            <th>Pagou?</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>01/2016</td>
+                            <td>Luz</td>
+                            <td>256,00</td>
+                            <td class="conta-paga">SIM</td>
+                            <td>
+                                <input type="button" value="Alterar"
+                                       class="btn-azul" onclick="alterar()"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>04/2017</td>
+                            <td>Água</td>
+                            <td>78,90</td>
+                            <td class="conta-paga">SIM</td>
+                            <td>
+                                <input type="button" value="Alterar"
+                                       class="btn-azul" onclick="alterar()"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>05/2017</td>
+                            <td>Telefone</td>
+                            <td>129,87</td>
+                            <td class="conta-nao-paga">NÃO</td>
+                            <td>
+                                <input type="button" value="Alterar"
+                                       class="btn-azul" onclick="alterar()"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p id="resposta"></p>
+
+            </fieldset>
+        </form>
+    </body>
+</html>
